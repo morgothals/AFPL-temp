@@ -10,7 +10,7 @@ A dokumentum célja a Plinko weboldal funkcionális specifikációjának részle
 
 ### 1.2 Jelenlegi Helyzet
 
-Jelenleg kevés olyan online platform létezik, amely a Plinko játékot valós pénzes tétekkel kínálja egy biztonságos és felhasználóbarát környezetben. A játékosok olyan weboldalt keresnek, ahol élvezhetik a játékot, és esélyük van nagy nyeremények elérésére.
+Jelenleg kevés olyan online platform létezik, amely a Plinko játékot csak mint élményt kínálja valós kifizetés nélkül felhasználóbarát környezetben. Főleg a 18 év alatti játékosok olyan weboldalt keresnek, amik megadja nekik az élményt anélkül, hogy az korhatárhoz kötött lenne, ugyanakkor biztosítsa az egészséges verseny lehetőségét pontszámokban.
 
 ### 1.3 Hatály
 
@@ -20,18 +20,16 @@ A dokumentum a Plinko weboldal fejlesztésére vonatkozik, amelyet három fejles
 
 ### 2.1 Rendszer célja
 
-Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra, valódi pénzes tétek elhelyezésére, nyeremények megszerzésére és versengésre a ranglistán, mindezt egy biztonságos és megbízható környezetben.
+Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra, játék pénzes tétek elhelyezésére, nyeremények megszerzésére és versengésre a ranglistán, mindezt egy biztonságos és megbízható környezetben.
 
 ### 2.2 Felhasználói esetek (Use-Case)
 
 - **Regisztráció és bejelentkezés**
-- **Egyenleg feltöltése**
 - **Játék beállítása és indítása**
 - **Nyeremény kiszámítása és jóváírása**
 - **Ranglista megtekintése**
 - **Profil szerkesztése**
 - **Játéktörténet megtekintése**
-- **Kifizetés kérése**
 - **Vendég módú játék**
 
 ## 3. Funkcionális követelmények
@@ -43,10 +41,6 @@ Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra
 - Bejelentkezés után a felhasználó hozzáfér a teljes funkcionalitáshoz.
 - Jelszó visszaállítás email alapján.
 
-### 3.2 Egyenleg kezelése
-
-- **Befizetés**: Bankkártya, PayPal vagy kriptovaluta használatával.
-- **Kifizetés**: Kérelem benyújtása, tranzakciók ellenőrzése.
 
 ### 3.3 Játék beállítása
 
@@ -90,7 +84,7 @@ Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra
 
 - **Reszponzív design** minden eszközön.
 - **Teljesítmény**: Gyors betöltés és gördülékeny működés.
-- **Biztonság**: Felhasználói adatok és tranzakciók védelme.
+- **Biztonság**: Felhasználói adatok védelme.
 - **Skálázhatóság**: Növekvő felhasználói szám és tranzakciók kezelése.
 - **Felhasználóbarát felület**: Könnyű navigáció és használat.
 - **Megbízhatóság**: Stabil működés, hibamentes játékélmény.
@@ -100,7 +94,6 @@ Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra
 ### 5.1 Játék folyamat
 
 1. A felhasználó bejelentkezik vagy vendég módban játszik.
-2. Egyenleg feltöltése (ha szükséges).
 3. Beállítja a játék paramétereit: tét, kockázati szint, sorok száma.
 4. A "Játék indítása" gombra kattint.
 5. A labda leejtése és animáció megjelenítése.
@@ -145,17 +138,7 @@ Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra
 | created_at  | TIMESTAMP      | Létrehozás dátuma          |
 | updated_at  | TIMESTAMP      | Módosítás dátuma           |
 
-### 6.3 Tranzakciók (opcionális)
 
-| Oszlopnév   | Típus          | Leírás                     |
-|-------------|----------------|----------------------------|
-| id          | INT (auto-incr)| Egyedi azonosító           |
-| user_id     | INT            | Felhasználó azonosítója    |
-| type        | ENUM           | Tranzakció típusa (befizetés, kifizetés) |
-| amount      | DECIMAL(10,2)  | Összeg                     |
-| status      | ENUM           | Tranzakció állapota        |
-| created_at  | TIMESTAMP      | Létrehozás dátuma          |
-| updated_at  | TIMESTAMP      | Módosítás dátuma           |
 
 ## 7. Megvalósítás
 
@@ -177,11 +160,11 @@ Az online Plinko játék lehetőséget biztosít a felhasználóknak a játékra
 
 ### 8.1 Jelenlegi üzleti folyamatok modellje
 
-A játékosok különböző online kaszinó oldalakon játszanak, amelyek nem mindig nyújtanak biztonságos és megbízható szolgáltatást, vagy nem kínálják a Plinko játékot.
+A játékosok különböző online kaszinó oldalakon játszanak, amelyek nem mindig nyújtanak biztonságos és megbízható szolgáltatást, vagy nem kínálják a Plinko játékot. Általában ezeket az oldalkat nem lehet regisztráció nélkül használni, ami korhatárhoz vagy lakóhely területéhez kötött.
 
 ### 8.2 Igényelt üzleti folyamatok modellje
 
-Egy megbízható, biztonságos és felhasználóbarát weboldal, ahol a felhasználók élvezhetik a Plinko játékot, valódi pénzes tétekkel játszhatnak, és esélyük van nagy nyeremények elérésére.
+Egy megbízható, biztonságos és felhasználóbarát weboldal, ahol a felhasználók élvezhetik a Plinko játékot és versenghetnek a ranglistában.
 
 ## 9. Fogalomtár
 
@@ -198,7 +181,6 @@ Egy megbízható, biztonságos és felhasználóbarát weboldal, ahol a felhaszn
 |---------------------------------|----------------------------------------------------------------------------------------------------------|
 | **Regisztráció lap**            | Felhasználói fiók létrehozása.                                                                           |
 | **Bejelentkezés lap**           | Bejelentkezés a rendszerbe.                                                                              |
-| **Egyenleg feltöltése**         | Befizetés kezelése különböző fizetési módokkal.                                                          |
 | **Játék beállítása**            | Tét, kockázati szint és sorok számának megadása.                                                         |
 | **Játék indítása gomb**         | A játék elindítása.                                                                                      |
 | **Plinko tábla megjelenítése**  | Játékfelület és animáció megjelenítése.                                                                  |
@@ -208,9 +190,6 @@ Egy megbízható, biztonságos és felhasználóbarát weboldal, ahol a felhaszn
 | **Ranglista megtekintése**      | A legjobb játékosok listájának megtekintése.                                                             |
 | **Profil szerkesztése**         | Felhasználói adatok és profilkép módosítása.                                                             |
 | **Játéktörténet megtekintése**  | Korábbi játékok és nyeremények megtekintése.                                                             |
-| **Kifizetés kérése**            | Nyeremények kifizetésének kezdeményezése.                                                                |
 | **Kilépés gomb**                | Kijelentkezés a fiókból.                                                                                 |
 
----
 
-A fenti dokumentáció alapján a rendszer érthetően és részletesen kidolgozott, így a fejlesztők számára egyértelmű a megvalósítandó feladat. A Laravel keretrendszer használatával és a megadott időkereten belül a projekt elkészíthető.
