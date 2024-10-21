@@ -1,6 +1,4 @@
-Az alábbiakban újrageneráltam a Plinko weboldal dokumentációját a megadott fájlnevekkel és a frissített információk alapján: **RENDZSERTERV.md**, **KOVSPEC.md** és **FUNKSPEC.md**.
 
----
 
 # RENDSZERTERV.md
 
