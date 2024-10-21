@@ -1,9 +1,5 @@
 
 
-
-
-
-
 # FUNKSPEC.md
 
 ## 1. Bevezetés
