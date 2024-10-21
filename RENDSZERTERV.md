@@ -111,7 +111,6 @@ A weboldal egy online Plinko játékot valósít meg, amely a népszerű televí
 
 ### 5. Adatmodell
 
-![Adatmodell ábra](../pic/plinko_adatmodell.jpg?raw=true "Adatmodell")
 
 #### 5.1 Felhasználók
 
