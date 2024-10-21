@@ -188,7 +188,7 @@ Az alkalmazás a Laravel MVC architektúrát követi.
 
 - **users** tábla: Felhasználói adatok és egyenleg tárolása.
 - **games** tábla: Játékok, tétek és nyeremények tárolása.
-- **transactions** tábla: Befizetések és kifizetések naplózása (opcionális).
+
 
 ### 3. Teszttervek
 
@@ -197,16 +197,7 @@ Az alkalmazás a Laravel MVC architektúrát követi.
 - **Felhasználói tesztek**: Felület tesztelése különböző eszközökön és böngészőkben.
 - **Biztonsági tesztek**: Bejelentkezés, adatvédelem és tranzakciók tesztelése.
 
-### 4. Telepítési terv
 
-- **Szerver**: PHP 8+, Laravel 10+, MySQL/MariaDB.
-- **Lépések**:
-  - Kód letöltése a verziókezelőből (Git).
-  - Függőségek telepítése (`composer install`, `npm install`).
-  - Környezeti változók beállítása (adatbázis kapcsolatok, API kulcsok).
-  - Adatbázis migrációk és seederek futtatása (`php artisan migrate --seed`).
-  - Alkalmazás kulcs generálása (`php artisan key:generate`).
-  - Alkalmazás cache-ek generálása (`php artisan config:cache`, `php artisan route:cache`).
 
 ### 5. Rendszerspecifikációk
 
@@ -243,4 +234,3 @@ Az adatok objektumorientált módon kerülnek kezelésre az Eloquent ORM segíts
   - `deposit()`: Befizetés kezelése.
   - `withdraw()`: Kifizetés kezelése.
 
----
