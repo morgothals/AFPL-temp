@@ -6,19 +6,17 @@ Ez a dokumentum a Plinko weboldal követelmény specifikációit tartalmazza. A 
 
 ## 2. Jelenlegi Helyzet
 
-Jelenleg kevés olyan online platform létezik, amely a Plinko játékot valós pénzes tétekkel és nyereményekkel kínálja egy biztonságos és megbízható környezetben. A játékosok olyan platformot keresnek, ahol élvezhetik a játékot, és esélyük van nagy nyeremények elérésére.
+Jelenleg kevés olyan online platform létezik, amely a Plinko játékot csak mint élményt kínálja valós kifizetés nélkül felhasználóbarát környezetben. Főleg a 18 év alatti játékosok olyan weboldalt keresnek, amik megadja nekik az élményt anélkül, hogy az korhatárhoz kötött lenne, ugyanakkor biztosítsa az egészséges verseny lehetőségét pontszámokban.
 
 ## 3. Vágyálom rendszer
 
 Egy reszponzív webalapú Plinko játék, amely lehetővé teszi a felhasználóknak:
 
 - Regisztrációt és bejelentkezést.
-- Valódi pénzes tétek elhelyezését.
 - Különböző kockázati szintek és sorok számának beállítását.
 - Nyeremények megszerzését a labda véletlenszerű mozgása alapján.
 - Ranglistán való versengést.
 - Profiljuk testreszabását.
-- Befizetéseket és kifizetéseket biztonságosan lebonyolítani.
 
 ## 4. Funkcionális követelmények
 
@@ -28,7 +26,6 @@ Egy reszponzív webalapú Plinko játék, amely lehetővé teszi a felhasználó
 - **Sorok számának beállítása**: 8 és 16 sor között.
 - **Játék indítása és labda leejtése**.
 - **Nyeremény kiszámítása és jóváírása**.
-- **Egyenleg kezelése**: Befizetések és kifizetések lebonyolítása.
 - **Ranglista megjelenítése**.
 - **Profil szerkesztése**.
 - **Játéktörténet megtekintése**.
@@ -38,20 +35,18 @@ Egy reszponzív webalapú Plinko játék, amely lehetővé teszi a felhasználó
 
 - **GDPR**: Megfelelés az adatvédelmi előírásoknak.
 - **Szerencsejáték törvények**: Megfelelés a helyi szerencsejáték szabályozásoknak és engedélyeknek.
-- **Pénzmosás elleni szabályozások**: KYC (Ismerd meg az ügyfeled) és tranzakciók ellenőrzése.
+
 
 ## 6. Jelenlegi üzleti folyamatok modellje
 
-A játékosok különböző online kaszinó oldalakon játszanak, de ezek gyakran nem nyújtanak megfelelő biztonságot vagy nem kínálják a Plinko játékot.
+A játékosok különböző online kaszinó oldalakon játszanak, TODO
 
 ## 7. Igényelt üzleti folyamatok modellje
 
 - **Regisztráció és bejelentkezés**: A felhasználók létrehozhatják a fiókjukat és bejelentkezhetnek.
-- **Egyenleg feltöltése**: Biztonságos befizetések kezelése.
 - **Játék beállítása**: Tét összegének megadása, kockázati szint és sorok számának kiválasztása.
 - **Játék indítása**: Labda leejtése és nyeremény kiszámítása.
 - **Nyeremény jóváírása**: Nyeremények automatikus jóváírása a felhasználó egyenlegére.
-- **Kifizetés kérése**: Nyeremények kifizetése a felhasználó számára.
 - **Ranglista megtekintése**: A legjobb játékosok megtekintése.
 - **Profil kezelése**: Felhasználói adatok szerkesztése.
 
@@ -69,7 +64,6 @@ A játékosok különböző online kaszinó oldalakon játszanak, de ezek gyakra
 |---------------------------------|----------------------------------------------------------------------------------------------------------|
 | **Regisztráció lap**            | Felhasználói fiók létrehozása felhasználónév, email és jelszó megadásával.                               |
 | **Bejelentkezés lap**           | Bejelentkezés a rendszerbe email és jelszó megadásával.                                                  |
-| **Egyenleg feltöltése**         | Befizetés bankkártyával vagy más fizetési móddal.                                                        |
 | **Játék beállítása**            | Tét összegének, kockázati szintnek és sorok számának megadása.                                           |
 | **Játék indítása**              | Labda leejtése és animáció megjelenítése.                                                                |
 | **Nyeremény kiszámítása**       | Nyeremény meghatározása a labda végső pozíciója és a szorzó alapján.                                     |
@@ -77,7 +71,6 @@ A játékosok különböző online kaszinó oldalakon játszanak, de ezek gyakra
 | **Ranglista megtekintése**      | Legjobb játékosok listájának megtekintése a nyeremények alapján.                                         |
 | **Profil szerkesztése**         | Felhasználói adatok és profilkép módosítása.                                                             |
 | **Játéktörténet megtekintése**  | Korábbi játékok, tétek és nyeremények megtekintése.                                                     |
-| **Kifizetés kérése**            | Nyeremények kifizetésének kezdeményezése.                                                                |
 | **Vendég mód**                  | Játék lehetősége regisztráció nélkül, nyeremények mentése nélkül.                                        |
 | **Jelszó visszaállítás**        | Elfelejtett jelszó esetén email alapú visszaállítás.                                                     |
 | **Kilépés gomb**                | Kijelentkezés a fiókból.                                                                                 |
